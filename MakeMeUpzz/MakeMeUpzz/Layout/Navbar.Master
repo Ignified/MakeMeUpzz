@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Navbar.master.cs" Inherits="MakeMeUpzz.Layout.Navbar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <h1>Welcome,</h1>
+        <asp:Label ID="WelcomeLabel" runat="server" Text="[NAMA USER]"></asp:Label>
+        <h4>Active User: </h4>
+        <asp:Label ID="ActiveUserCountLabel" runat="server" Text=" "></asp:Label>
+        <div id="CustomerRole" runat="server">
+            <asp:Button ID="OrderMakeupBtn" runat="server" Text="Order Makeup" Style="margin-right: 12.5px" OnClick="OrderMakeupBtn_Click" />
+            <asp:Button ID="HistoryBtn" runat="server" Text="History" Style="margin-right: 12.5px" OnClick="HistoryBtn_Click" />
+            <asp:Button ID="ProfileCustomerBtn" runat="server" Text="Profile" Style="margin-right: 12.5px" OnClick="ProfileCustomerBtn_Click" />
+            <asp:Button ID="LogoutCustomerBtn" runat="server" Text="Logout" OnClick="LogoutCustomerBtn_Click" />
+        </div>
+        <div id="AdminRole" runat="server">
+            <asp:Button ID="HomeBtn" runat="server" Text="Home" Style="margin-right: 12.5px" OnClick="HomeBtn_Click" />
+            <asp:Button ID="ManageMakeupBtn" runat="server" Text="Manage Makeup" Style="margin-right: 12.5px" OnClick="ManageMakeupBtn_Click" />
+            <asp:Button ID="OrderQueueBtn" runat="server" Text="Order Queue" Style="margin-right: 12.5px" OnClick="OrderQueueBtn_Click" />
+            <asp:Button ID="ProfileAdminBtn" runat="server" Text="Profile" Style="margin-right: 12.5px" OnClick="ProfileAdminBtn_Click" />
+            <asp:Button ID="HistoryAdminBtn" runat="server" Text="History" Style="margin-right: 12.5px" OnClick="HistoryBtn_Click" />
+            <asp:Button ID="TransactionReportBtn" runat="server" Text="Transaction Report" Style="margin-right: 12.5px" OnClick="TransactionReportBtn_Click" />
+            <asp:Button ID="LogoutAdminBtn" runat="server" Text="Logout" OnClick="LogoutAdminBtn_Click" />
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
